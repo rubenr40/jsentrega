@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link de fuente google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link de nuestro css externo -->
+    <link rel="stylesheet" href="./css/style1.css" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <p class="header__logo">        
+
+        <a href="./index.html">
+        <span class="logoH">B</span><span >a</span><span class="logoH">H</span><span >arat</span>
+        </a>
+
+      </p>
+      <nav class="header__nav">
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <!-- lo anulo con # porque no tengo pagina aun, es solo provisorio -->
+            <a href="./pages/contacto.html">Contacto</a>
+          </li>
+          <li>
+            <a href="./pages/carrito.html" class="carrito-icono"> 
+                🛒 <span id="contador-carrito">(0)   Total productos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="titulo-home texto-sombreado">BaHarat </h1>
+      <p class="parrafo-home">
+        Supervision: El mejor supervisor
+      </p>
+
+      <!-- <br> provisorio, hasta ver margin y padding -->
+
+      <section class="productos-home">
+        <h2>Algunos de nuestros productos</h2>
+
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
+         <!--  <article class="tarjeta-producto">
+            <img src="./img/Cake_20230518_094932.jpg" alt="Cakes RI" />
+            <h3>Rosquitas Orientales</h3>
+            <p>Oriental Cokies [250g o 400g] </p>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img src="./img/Sambusek Copetin20241125_212031.jpg" alt="Smabusek Copetin" />
+            <h3>Empanada Oriental de Queso</h3>
+            <h2>Cheese Empanada</h2>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img src="./img/Frola_20230511_135556.jpg" alt="Pastafrola" />
+            <h3>Tarta Pastafrola Mediana</h3>
+            <p></p>
+          </article>
+          <article class="tarjeta-producto">
+            <img src="./img/Bandeja Fiesta_20230801_122553.jpg" alt="Bandeja Fiesta" />
+            <h3>Bandeja Fiesta Mediana</h3>
+            <p>Party Sweet</p>
+          </article> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>diseño Pistrello</p>
+      <nav>
+        <ul>
+          <li>baharatr@gmail.com</li>
+          <li>Whatsapp 119960078487</li>
+          <li>Instagram</li>
+          <li>Tiktok</li>
+          <li>X</li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

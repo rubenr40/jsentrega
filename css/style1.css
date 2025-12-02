@@ -1,0 +1,373 @@
+/* Reset de css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --color-primario: #f8f8f2bf; /* Un azul brillante */
+  --color-secundario: #cf0303; /* Un verde vibrante */
+  --color-texto-claro: #e00404; /* Un gris oscuro para el texto */
+  --color-texto-oscuro: #be2f2f; /* Un gris oscuro para el texto */
+
+  
+  --color-logo: #ff0404; /* Un gris oscuro para el texto */
+  --shadow-logo:3px 2px 0px rgb(244, 231, 52), 6px 4px 0px rgb(110, 27, 7);
+  --shadow-logoH:3px 2px 0px rgb(244, 231, 52), 8px 6px 0px rgb(110, 27, 7);
+
+   --color-tarjeta-fondo: #e02f2f; /* Un gris oscuro para el texto */
+   --color-tarjeta-h3: #eaefc4; /* Un gris oscuro para el texto */
+   --color-tarjeta-p: #ffffc4; /* Un gris oscuro para el texto */
+   --color-tarjeta-producto: #faffc4; /* Un gris oscuro para el texto */
+} 
+
+
+
+html {
+  /* Sin congiguracion el rem vale: */
+  /* 1rem = 16px */
+
+  /* Para que 1 rem = 10px */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 3.6rem;
+  line-height: 1.5;
+  /* background-color: #682e38; */
+  /* color: #e5e6e8; */
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  /* ====== */
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+/* 
+  text-shadow */
+
+}
+
+.header {
+  /* background-color: #682e38; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+
+  /* ====== */
+  background-color: var(--color-primario);
+
+ 
+}
+/* =============    LOGO  =========== */
+.header__logo {
+  padding: 1rem;
+  margin-left: 2rem;
+
+  font-size: 13rem;
+  font-weight: bold;
+}
+.header__logo a {
+  padding: 0rem;
+  margin-left: 0rem;
+  
+  color: var(--color-logo); /* #f7bb2b; */
+  text-decoration: none;
+  /* text-shadow: 1px 2px 0px rgb(244, 231, 52), 4px 4px 0px rgb(110, 27, 7); */
+  text-shadow: var(--shadow-logo);
+  
+}
+.logoH {
+  padding: 0rem;
+  margin-left: 0rem;
+  
+  font-size: 22rem;
+  font-weight: bold;
+  color: var(--color-logo); /* #f7bb2b; */
+  text-decoration: none;
+  /* text-shadow: 1px 2px 0px rgb(244, 231, 52), 4px 4px 0px rgb(110, 27, 7); */
+  text-shadow: var(--shadow-logoH);
+  
+}
+
+
+.header__nav {
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.header__nav li {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.header__nav a {
+  color: var(--color-texto-oscuro); /* #f7bb2b;*/
+  text-decoration: none;
+  /* display: inline-block; */
+  padding: 1rem;
+}
+
+.footer {
+  background-color: var(--color-primario); /* #1d1a20;*/
+
+  padding: 2rem;
+  color: var(--color-texto-oscuro); /* #f7bb2b;*/
+
+  /* hago flexibles al p y la nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e6d6b1;
+}
+.footer nav ul {
+  list-style: none;
+
+  /* hago flexibles a los li de la lista */
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* 20px */
+}
+
+.footer nav li {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              👉Nuevo: BOTONES                              */
+/* -------------------------------------------------------------------------- */
+.btn {
+  background-color: #d21f3c;
+  color: #e5e6e8;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #b71c34;
+}
+
+.btn-eliminar-carrito {
+  background-color: #1d1a20;
+  border: 2px solid #d21f3c;
+}
+.btn-vaciar-carrito {
+  background-color: #f7bb2b;
+  color: #1d1a20;
+}
+.btn-vaciar-carrito:hover {
+  background-color: #e0aa24;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    HOME                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+  width: 90%;
+
+  /* body dijo que sus hijos sean flexibles (header, main y footer) */
+  /* al aplicar la propiedad "flex: 1" a un hijo, le decimos que ese 
+  hijo siempre tomara el mayor espacio disponible */
+  
+
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 9rem;
+  margin: -5rem 0 -3rem 0;
+  
+}
+
+main .parrafo-home {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 0rem 0;
+  /* padding: 0rem; */
+  margin-bottom: -1rem;
+  width: 80%;
+}
+
+.productos-home {
+  width: 100%;
+}
+
+.productos-home h2 {
+  text-align: center;
+  font-size: 5rem;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.contenedor-tarjetas,#contenedor-carrito  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.tarjeta-producto {
+  background-color: var(--color-tarjeta-fondo);/* #1d1a20;*/
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 30rem;
+
+  /* hacemos flexibles los elementos del article */
+  /* los colocamos en columna y centrados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-tarjeta-producto);/* #1d1a20;*/
+  /* separacion */
+  gap: 1rem;
+}
+
+.tarjeta-producto h3 {
+  font-size: 2.5rem;
+  color: var(--color-tarjeta-h3);/* #1d1a20;*/
+}
+
+.tarjeta-producto p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-tarjeta-p);/* #1d1a20;*/
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Contacto                                  */
+/* -------------------------------------------------------------------------- */
+
+q.seccion-contacto {
+  width: 100%;
+
+  margin: 2rem auto;
+}
+
+q.titulo-contacto {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+q.form {
+  background-color: #1d1a20;
+  padding: 5rem;
+  border-radius: 1rem;
+  width: 30%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+q.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+q.campo-form label {
+  font-size: 2rem;
+}
+q.campo-form input,
+q.campo-form textarea {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+q.form button {
+  background-color: #d21f3c;
+  color: #e5e6e8;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+
+
+/* ================= */
+/* ===    Mios   === */
+/* ================= */
+q.texto-sombreado {
+   text-shadow:
+    6px 0 0 rgb(19, 3, 97), /* Sombras a la derecha */
+    -1px 0 0 black, /* Sombras a la izquierda */
+    0 1px 0 black, /* Sombras hacia abajo */
+    0 -1px 0 black; /* Sombras hacia arriba */ 
+}
+.logo-sombreado {
+   text-shadow:
+    6px 0 0 rgb(19, 3, 97), /* Sombras a la derecha */
+    -1px 0 0 black, /* Sombras a la izquierda */
+    0 1px 0 black, /* Sombras hacia abajo */
+    0 -1px 0 black; /* Sombras hacia arriba */ 
+}
+
+
+/* ========================= */
+/* ===    Main Carrito   === */
+/* ========================= */
+
+
+.contenedor-carritoQQ {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.tarjeta-producto-carrito {
+  background-color: var(--color-tarjeta-fondo);/* #1d1a20;*/
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 30rem;
+
+  /* hacemos flexibles los elementos del article */
+  /* los colocamos en columna y centrados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-tarjeta-producto);/* #1d1a20;*/
+  /* separacion */
+  gap: 1rem;
+}
+
